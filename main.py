@@ -43,6 +43,6 @@ async def itf(client: IT, message: Message):
 	else:
 		await IT.send_message(chat_id=CHL, text=f"Gönderen: {message.from_user.mention}\nİtiraf: {t}")
 		time.sleep(0.5)
-		await message.reply_text(İtirafınız sahibime gönderildiği onaylandıktan sonra @mutsuz_panda kanalında paylaşılacaktır🥰.")
+		await message.reply_text("İtirafınız sahibime gönderildiği onaylandıktan sonra @mutsuz_panda kanalında paylaşılacaktır🥰.")
 
 IT.run()
