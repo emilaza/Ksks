@@ -33,7 +33,7 @@ async def ano(client: IT, message: Message):
 	else:
 		await IT.send_message(chat_id=CHL, text=f"Gönderen: ANONİM\nİtiraf: {text}")
 		time.sleep(0.5)
-		await IT.send_message(chat_id=PM, text=f"Gönderen: {message.from_user.mention}\nEtiraf: {text}")
+		await IT.send_message(chat_id=PM, text=f"Gönderen: {message.from_user.mention}\nİtiraf: {text}")
 		time.sleep(0.5)
 		await message.reply_text("İtirafınız sahibime gönderildiği onaylandıktan sonra @mutsuz_panda kanalında paylaşılacaktır🥰.")
 
