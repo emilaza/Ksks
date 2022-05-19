@@ -1,7 +1,7 @@
 {
-	"name": "Etiraf Bot",
-	"description": "@Sirvhan Tərəfindən kodlanan etiraf botu",
-	"repository": "https://github.com/Goqerti/Etiraf",
+	"name": "İtiraf Bot",
+	"description": "@mutsuz_panda",
+	"repository": "https://github.com/emilaza/Ksks",
 	"env": {
 		"BOT_TOKEN": {
 			"description": "@BotFather dan alınan Bot Token girin."
