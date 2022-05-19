@@ -1,4 +1,4 @@
-
+# Codes by: @Sirvhan
 
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
@@ -21,39 +21,30 @@ CHL = -1001786824396
 
 PM = 5128216420
 
-@IT.on_message(
-	filters.command("start")
-	& filters.private
-	)
+@IT.on_message(filters.command("start") & filters.private)
 async def start(client: IT, message: Message):
-	await message.reply_text(f"<b> {message.from_user.mention} Xoş Gəldin🥰,Mən @Sirvhan tərəfindən hazırlanan bir etiraf botu’yam.\nEtiraflarınız @səninkanalın kanalında paylaşılacaq🤓.\n\nSəndə bir etiraf etmək istəyirsənsə komutlar;\nAnonim Etiraf: /ano mesaj\nAçıq Etiraf: /etiraf mesaj</b>")
+	await message.reply_text(f"<b> {message.from_user.mention} Hoş Geldin🥰,Ben @mutsuz_panda tərəıindən hazırlanan bir itiraf botu’yum.\nİtiraflarınız @mutsuz_panda kanalında paylaşılacak🤓.\n\nSende bir itiraf etmək istiyorsan  komutlar;\nAnonim İtiraf: /ano mesaj\nAçık İtiraf: /itiraf mesaj</b>")
 
-@IT.on_message(
-	filters.command("ano")
-	& filters.private
-	)
+@IT.on_message(filters.command("ano") & filters.private)
 async def ano(client: IT, message: Message):
 	text = " ".join(message.command[1:])
 	if text == "":
-		await message.reply_text("Xahiş Olunur Bir Etiraf yazıb yenidən cəhd edin📣.")
+		await message.reply_text("Lütfen bir itiraf yazarak tekrar deneyin📣.")
 	else:
-		await IT.send_message(chat_id=CHL, text=f"Göndərən: ANONİM\nEtiraf: {text}")
+		await IT.send_message(chat_id=CHL, text=f"Gönderen: ANONİM\nİtiraf: {text}")
 		time.sleep(0.5)
-		await IT.send_message(chat_id=PM, text=f"Göndərən: {message.from_user.mention}\nEtiraf: {text}")
+		await IT.send_message(chat_id=PM, text=f"Gönderen: {message.from_user.mention}\nEtiraf: {text}")
 		time.sleep(0.5)
-		await message.reply_text("Etirafınız Sahibimə göndərildi təsdiq etdikdən sonra @səninkanalın kanalında paylaşılacaq🥰.")
+		await message.reply_text("İtirafınız sahibime gönderildiği onaylandıktan sonra @mutsuz_panda kanalında paylaşılacaktır🥰.")
 
-@IT.on_message(
-	filters.command("etiraf")
-	& filters.private
-	)
-async def etf(client: IT, message: Message):
+@IT.on_message(filters.command("itiraf") & filters.private)
+async def itf(client: IT, message: Message):
 	t = " ".join(message.command[1:])
 	if t == "":
-		await message.reply_text("Xahiş olunur bir etiraf yazıb təkrar cəhd edin😶.")
+		await message.reply_text("Lütfen bir itiraf yazarak tekrar deneyin😶.")
 	else:
-		await IT.send_message(chat_id=CHL, text=f"Göndərən: {message.from_user.mention}\nEtiraf: {t}")
+		await IT.send_message(chat_id=CHL, text=f"Gönderen: {message.from_user.mention}\nİtiraf: {t}")
 		time.sleep(0.5)
-		await message.reply_text("Etirafınız Sahibimə göndərildi təsdiq etdikdən sonra @səninkanalın kanalında paylaşılacaq🥰.")
+		await message.reply_text(İtirafınız sahibime gönderildiği onaylandıktan sonra @mutsuz_panda kanalında paylaşılacaktır🥰.")
 
 IT.run()
