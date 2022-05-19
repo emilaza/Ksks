@@ -1,4 +1,4 @@
-# Codes by: @Sirvhan
+
 
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
@@ -17,9 +17,9 @@ IT = Client(
 	bot_token=BOT_TOKEN
 	)
 
-CHL = -1001555466882
+CHL = -1001786824396
 
-PM = 1340618002
+PM = 5128216420
 
 @IT.on_message(
 	filters.command("start")
